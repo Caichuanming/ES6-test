@@ -1,0 +1,106 @@
+// 表单内容块
+.form-model {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    label {
+        color: #2d3844;
+        font-size: 18px;
+        display: inline-block;
+        min-width: 140px;
+        text-align: justify;
+        vertical-align: sub;
+        &.ver-top {
+            vertical-align: top;
+        }
+    }
+    .form-input {
+        display: inline-block;
+        position: relative;
+        &.form-input-code {
+            .btn-code {
+                width: 115px;
+                height: 35px;
+                background-color: #2d3844;
+                font-size: 12px;
+                text-align: center;
+                line-height: 35px;
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translate(0, -50%);
+                color: #fff;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+        }
+        &.form-err:after {
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("../../images/input-status.png") no-repeat center -25px;
+            background-size: 100%;
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            transform: translate(0, -50%);
+        }
+        &.form-success:after {
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("../../images/input-status.png") no-repeat center 0;
+            background-size: 100%;
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            transform: translate(0, -50%);
+        }
+    }
+    .form-img {
+        display: inline-block;
+        position: relative;
+        .img-flash {
+            width: 140px;
+            height: 140px;
+            background-color: #f7f7f7;
+            border: 3px solid #eaeef1;
+            display: inline-block;
+        }
+        p {
+            display: inline-block;
+            line-height: 2;
+            position: absolute;
+            top: 50%;
+            left: 170px;
+            transform: translate(0, -50%);
+            white-space: nowrap;
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+.rule-line {
+    padding: 40px 0 40px 225px;
+    p {
+        margin-left: 10px;
+        cursor: pointer;
+        display: inline-block;
+        color: #2d3844;
+        font-size: 16px;
+        font-weight: 500;
+        a {
+            font-size: 12px;
+            font-weight: normal;
+            text-decoration: underline;
+            margin-left: 5px;
+            color: #2d3844;
+            font-weight: 500;
+        }
+    }
+}

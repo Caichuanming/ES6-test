@@ -1,0 +1,121 @@
+.header {
+    width: 100%;
+    height: 68px;
+    background-color: #2d3844;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .header-title {
+        font-size: 27px;
+        line-height: 68px;
+    }
+    .header-nav {
+        float: right;
+        line-height: 68px;
+        font-size: 18px;
+        color: #eaeef1;
+        height: 68px;
+        dt,
+        dd {
+            display: inline-block;
+            height: 68px;
+            line-height: 68px;
+            cursor: pointer;
+        }
+        dd {
+            margin-right: 60px;
+        }
+        .header-nav-help {
+            width: 23px;
+            height: 23px;
+            background: url("../../images/header-nav-help.png") no-repeat center center;
+            background-size: 100%;
+        }
+        .header-nav-msg {
+            width: 24px;
+            height: 19px;
+            background: url("../../images/header-nav-msg.png") no-repeat center center;
+            background-size: 100%;
+            position: relative;
+            &.active:after {
+                content: "";
+                display: block;
+                width: 11px;
+                height: 10px;
+                background-color: red;
+                border-radius: 100%;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+            }
+        }
+    }
+}
+
+.header-nav dd {
+    position: relative;
+    margin-right: 60px;
+    .header-user-name {
+        display: inline-block;
+        &:after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 8px;
+            background: url("../../images/icon-arr.png") no-repeat center center;
+            background-size: 100%;
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            transform: translate(0, -50%);
+        }
+        &.show:after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 8px;
+            background: url("../../images/icon-arr.png") no-repeat center center;
+            background-size: 100%;
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            transform: rotate(180deg) translate(0, 4px);
+        }
+    }
+    .header-nav-user {
+        width: 23px;
+        height: 21px;
+        background: url("../../images/header-nav-user.png") no-repeat center center;
+        background-size: 100%;
+        margin-right: 5px;
+    }
+}
+
+.header-nav-help,
+.header-nav-msg,
+.header-nav-user {
+    display: inline-block;
+    vertical-align: sub;
+}
+
+//无侧边栏 
+.header-all {
+    width: 100%;
+    height: 125px;
+    background-color: #2d3844;
+    .header-all-logo{
+        display: inline-block;
+        width: 123px;
+        height: 125px;
+        background: url("../../images/logo.png") no-repeat center center;
+        background-size: 100%;
+        margin: 0 30px;
+        vertical-align: top;
+    }
+    p{
+        display: inline-block;
+        line-height: 125px;
+        color: #eaeef1;
+        font-size: 30px;
+    }
+}
