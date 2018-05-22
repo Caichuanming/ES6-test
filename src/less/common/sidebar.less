@@ -1,0 +1,121 @@
+.sidebar {
+    width: 205px;
+    height: auto;
+    background-color: #2d3844;
+    float: left;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    overflow: hidden;
+    .icon-logo {
+        display: block;
+        width: 123px;
+        height: 97px;
+        background: url("../../images/logo.png") no-repeat center center;
+        background-size: 100%;
+        margin: 14px auto;
+    }
+}
+
+.sidebar-nav {
+    dd {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        position: relative;
+        >a{
+            width: 100%;
+            text-indent: 64px;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            &.sidebar-nav-arr-hide:after{
+                vertical-align: middle;
+                content: "";
+                display: inline-block;
+                width: 15px;
+                height: 8px;
+                background: url("../../images/icon-arr.png") no-repeat center center;
+                background-size: 100%;
+                position: absolute;
+                top: 50%;
+                right: 17px;
+                transform: rotate(180deg) translate(0, 4px);
+            }
+            &.sidebar-nav-arr-show:after{
+                vertical-align: middle;
+                content: "";
+                display: inline-block;
+                width: 15px;
+                height: 8px;
+                background: url("../../images/icon-arr.png") no-repeat center center;
+                background-size: 100%;
+                position: absolute;
+                top: 50%;
+                right: 17px;
+                transform: translate(0, -50%);
+            }
+        }
+        >a:before{
+            vertical-align: sub;
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        &.sidebar-nav-home a:before{
+            width: 18px;
+            height: 14px;
+            background: url("../../images/sidebar-nav-home.png") no-repeat center center;
+            background-size: 100%;
+        }
+        &.sidebar-nav-banner a:before{
+            width: 20px;
+            height: 20px;
+            background: url("../../images/sidebar-nav-banner.png") no-repeat center center;
+            background-size: 100%;
+        }
+        &.sidebar-nav-report a:before{
+            width: 16px;
+            height: 16px;
+            background: url("../../images/sidebar-nav-report.png") no-repeat center center;
+            background-size: 100%;
+        }
+        &.sidebar-nav-cilent a:before{
+            width: 18px;
+            height: 13px;
+            background: url("../../images/sidebar-nav-cilent.png") no-repeat center center;
+            background-size: 100%;
+        }
+        &.sidebar-nav-account a:before{
+            width: 19px;
+            height: 18px;
+            background: url("../../images/sidebar-nav-account.png") no-repeat center center;
+            background-size: 100%;
+        }
+    }
+}
+.sidebar-second-nav{
+    padding-right: 20px;
+    cursor: pointer;
+    li{
+        color: #aaadb1;
+        font-size: 16px;
+        list-style: none;
+        line-height: 30px;
+        margin-bottom: 5px;
+        a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-indent: 64px;
+            color: #aaadb1;
+            border-radius: 0 15px 15px 0;
+            &.active{
+                background-color: #dd2340;
+                color: #fff;
+            }
+        }
+    }
+}

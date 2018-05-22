@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge, chrome=1" />
+    <title>模板</title>
+    <!-- 公有样式 -->
+    <link rel="stylesheet" href="../../css/public.css">
+    <!-- 私有样式 -->
+    <link rel="stylesheet" href="../../css/register.css">
+</head>
+
+<body>
+    <!-- 内容 START -->
+    <div class="container-box">
+        @include("../include/header-all.html")
+        <!-- 内容 START-->
+        <div class="container-all">
+            <!-- 注册内容 -->
+            <h1 class="container-title">注册</h1>
+            <dl class="cont-model">
+                <dt>平台账号</dt>
+                <dd>
+                    <div class="form-model">
+                        <label for="">邮箱地址</label>
+                        <div class="form-input form-err">
+                            <input class="input" type="text" placeholder="此邮箱地址用于平台及接受平台信息使用">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="">验证码</label>
+                        <div class="form-input form-input-code form-success">
+                            <input class="input" type="text" placeholder="">
+                            <div class="btn-code">获取验证码</div>
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="">设置密码</label>
+                        <div class="form-input">
+                            <input class="input" type="password" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="">确认密码</label>
+                        <div class="form-input">
+                            <input class="input" type="password" placeholder="">
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="cont-model">
+                <dt>公司信息</dt>
+                <dd>
+                    <div class="form-model">
+                        <label for="">公司全称</label>
+                        <div class="form-input">
+                            <input class="input" type="text" placeholder="请填写与营业执照一直合法的公司">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="">营业执照注册号</label>
+                        <div class="form-input">
+                            <input class="input" type="text" placeholder="请填写完整的营业执照的注册号">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="" class="ver-top">影业执照照片</label>
+                        <div class="form-img">
+                            <div class="img-flash"></div>
+                            <p>
+                                <span>1. 2M以内，JPG/PNG格式的图片</span>
+                                <span>2. 我司资质验证系统已与工商部门联网，请勿提供虚假证件</span>
+                            </p>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="cont-model cont-model-last">
+                <dt>联系方式</dt>
+                <dd>
+                    <div class="form-model">
+                        <label for="">联系人</label>
+                        <div class="form-input">
+                            <input class="input input-max" type="text" placeholder="请填写联系人">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="">手机号码</label>
+                        <div class="form-input">
+                            <input class="input input-max" type="tel" placeholder="请填写可以联系到您的电话">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="">电子邮箱</label>
+                        <div class="form-input">
+                            <input class="input input-max" type="email" placeholder="请填写有效邮箱，用于接收平台审核通知等重要消息">
+                        </div>
+                    </div>
+                    <div class="form-model">
+                        <label for="" class="ver-top">联系地址</label>
+                        <div class="form-input">
+                            <div class="select-box">
+                                <div class="select">
+                                    <div class="select-side">请选择省/直辖市</div>
+                                    <ul class="option">
+                                        <li>北京</li>
+                                        <li>上海</li>
+                                        <li>天津</li>
+                                        <li>重庆</li>
+                                        <li>重庆</li>
+                                        <li>重庆</li>
+                                        <li>重庆</li>
+                                    </ul>
+                                </div>
+                                <div class="select">
+                                    <div class="select-side">请选择市/地区</div>
+                                    <ul class="option">
+                                        <li>北京市</li>
+                                        <li>上海市</li>
+                                        <li>天津市</li>
+                                        <li>重庆市</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input class="input input-max" type="text" placeholder="请填写有效地址，该地址作为联系您和回寄纸质协议等使用">
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <div class="cont-line">
+                <div class="rule-line">
+                    <label for="">
+                        <i class="radio active"></i>
+                    </label>
+                    <p>同意接受
+                        <a href="#">《AI智能广告营销平台服务条款》</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cont-line">
+                <a href="#" class="btn btn-default">注册</a>
+            </div>
+            <!-- 注册成功 -->
+            <div class="cont-line">
+                <p class="cont-intro">账号注册成功</p>
+                <a href="#" class="btn btn-default">返回首页</a>
+            </div>
+        </div>
+        <!-- 内容 END-->
+    </div>
+    <!-- 内容 END -->
+    @include("../include/footer.html")
+    <!-- 弹窗 -->
+    <div class="pop-box">
+        <div class="pop-bg"></div>
+        <div class="pop pop-register">
+            <div class="pop-cont">
+                <div class="register-intro">
+                    验证码已发至您的邮箱
+                    <span>发送的验证码在24小时内有效</span>
+                </div>
+                <p class="register-email">xxxx@x.com</p>
+                <a href="#" class="btn btn-default">前往查看</a>
+            </div>
+            <div class="btn btn-close">
+                关闭
+            </div>
+        </div>
+    </div>
+
+    <!-- 静态交互脚本 -->
+    <script src="../../js/aiad-common.js"></script>
+</body>
+
+</html>
